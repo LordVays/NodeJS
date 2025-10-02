@@ -33,7 +33,7 @@ io.on('connection', (socket) => {
 
         console.log(message);
 
-        socket.message("message", message);
+        socket.emit("message", message);
 
     });
 
