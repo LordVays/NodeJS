@@ -103,21 +103,31 @@ const addSystemMessage = (text) => {
 
 
 socket.on('connect', () => {
+
     console.log('Успешно подключено к серверу!');
+
 });
 
 socket.on('message', (msg) => {
+
     addChatMessage(msg);
+
 });
 
 socket.on('user connected', (systemMessage) => {
+
     addSystemMessage(systemMessage);
+
 });
 
 socket.on('user disconnected', (systemMessage) => {
+
     addSystemMessage(systemMessage);
+
 });
 
 socket.on('disconnect', () => {
+
     addSystemMessage('Вы были отключены от сервера.');
+    
 });
