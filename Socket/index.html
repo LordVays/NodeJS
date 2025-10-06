@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чат</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app">
+        <div id="login-screen">
+            <h2>Добро пожаловать в чат!</h2>
+
+            <p>Введите ваш никнейм, чтобы войти</p>
+
+            <div class="form-group">
+                <input type="text" id="nickname-input" placeholder="Ваш никнейм..." autofocus>
+                <button id="join-button">Войти</button>
+            </div>
+        </div>
+
+        <div id="chat-screen" class="hidden">
+            <div id="messages">
+            </div>
+
+            <form id="message-form">
+                <input id="message-input" placeholder="Введите сообщение..." autocomplete="off" />
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</html>
